@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/product_navigation"
+    app:startDestination="@id/productHomeFragment">
+
+
+    <fragment
+        android:id="@+id/productHomeFragment"
+        android:name="com.example.homework12_leacture15.ProductHomeFragment"
+        android:label="fragment_product_home"
+        tools:layout="@layout/fragment_product_home" >
+        <action
+            android:id="@+id/action_productHomeFragment_to_productDescriptionFragment"
+            app:destination="@id/productDescriptionFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_enter_anim" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/productDescriptionFragment"
+        android:name="com.example.homework12_leacture15.ProductDescriptionFragment"
+        android:label="fragment_product_description"
+        tools:layout="@layout/fragment_product_description" >
+
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue='"Empty"' />
+        <argument
+            android:name="sold"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="rating"
+            app:argType="float"
+            android:defaultValue="5.0" />
+        <argument
+            android:name="prize"
+            app:argType="integer"
+            android:defaultValue="170" />
+        <argument
+            android:name="images"
+            app:argType="integer[]" />
+        <argument
+            android:name="colorsArr"
+            app:argType="integer[]" />
+    </fragment>
+</navigation>

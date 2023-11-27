@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProductHomeFragment"
+    android:id="@+id/home_fragment"
+    android:background="@color/dark_blue">
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_arrow"
+        android:background="@color/transparent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <EditText
+        android:id="@+id/searchEdtTxt"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/backBtn"
+        app:layout_constraintTop_toTopOf="@id/backBtn"
+        app:layout_constraintStart_toEndOf="@id/backBtn"
+        android:layout_marginLeft="10dp"
+        android:paddingStart="10dp"
+        android:hint="@string/search"
+        android:textColorHint="@color/grey_white"
+        android:textColor="@color/white"
+        android:textAppearance="@style/heading"/>
+
+    <ImageButton
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_search_24"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/searchEdtTxt"
+        app:layout_constraintTop_toTopOf="@id/searchEdtTxt"
+        app:layout_constraintStart_toEndOf="@id/searchEdtTxt"
+        android:layout_marginLeft="20dp"/>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerForProduct"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/searchEdtTxt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
