@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework12_leacture15.databinding.ItemForProductHomeBinding
+import com.example.homework12_leacture15.databinding.ItemImageButtonRecyclerBinding
 
 class ProductRecyclerAdapter(private val listener: ItemClickListener) : ListAdapter<Product, RecyclerView.ViewHolder>(DIFF_CALLBACK) {
     companion object {
@@ -29,7 +30,8 @@ class ProductRecyclerAdapter(private val listener: ItemClickListener) : ListAdap
         fun bind(product: Product){
             binding.img.setImageResource(product.imageList[0])
             binding.tvName.text = product.name
-
+            binding.tvRating.text = product.rating.toString()
+            binding.tvPrise.text = product.prise.toString()
             binding.img.setOnClickListener{
                 listener.onItemClicked(product)
             }
@@ -42,18 +44,23 @@ class ProductRecyclerAdapter(private val listener: ItemClickListener) : ListAdap
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+
         if(viewType == Item_Type_1){
+
             return ProductViewHolder(
                 ItemForProductHomeBinding.inflate(
                     LayoutInflater.from(parent.context), parent, false)
             )
+
         }else{
 
             return ProductViewHolder(
                 ItemForProductHomeBinding.inflate(
                     LayoutInflater.from(parent.context), parent, false)
             )
+
         }
+
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {

@@ -17,14 +17,14 @@ data class Product(val id:Int,
 }
 
 enum class Color_(val colorId: Int){
-    BLACK(1),
-    WHITE(2),
+    WHITE(1),
+    BLACK(2),
     RED(3),
     BLUE(4),
     ORANGE(5),
     GREY(6)
 }
-enum class ProductType(name:String){
+enum class ProductType(val productName:String){
     VASE("Vase"),
     CHAIR("Chair"),
     SOFA("Sofa"),

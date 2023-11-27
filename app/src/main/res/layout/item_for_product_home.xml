@@ -4,12 +4,30 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_marginBottom="20dp">
-    <ImageView
-        android:id="@+id/img"
+    <FrameLayout
         android:layout_width="150dp"
         android:layout_height="170dp"
         android:layout_gravity="center"
-        android:scaleType="centerCrop"/>
+        android:background="@drawable/image_shape_recycler">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/image_shape_recycler"
+            android:src="@drawable/bed1_grey"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/heart"
+            android:background="@drawable/circle_shape"
+            android:layout_gravity="right"
+            android:layout_margin="20dp"/>
+
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/tvName"
@@ -75,6 +93,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tvPrise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"

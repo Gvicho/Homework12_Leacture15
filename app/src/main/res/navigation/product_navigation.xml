@@ -46,5 +46,9 @@
         <argument
             android:name="colorsArr"
             app:argType="integer[]" />
+        <argument
+            android:name="description"
+            app:argType="string"
+            android:defaultValue='"Empty"' />
     </fragment>
 </navigation>

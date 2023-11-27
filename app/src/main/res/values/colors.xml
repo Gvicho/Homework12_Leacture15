@@ -6,4 +6,9 @@
     <color name="dark_blue">#E6131820</color>
     <color name="sold_frame_background_color">#57FFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="light_black">#E6191818</color>
+    <color name="red">#E6FB0303</color>
+    <color name="blue">#E60470E3</color>
+    <color name="orange">#E6EA8010</color>
+    <color name="grey">#E6333333</color>
 </resources>

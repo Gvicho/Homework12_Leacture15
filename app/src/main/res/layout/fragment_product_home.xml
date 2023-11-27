@@ -22,7 +22,7 @@
     <EditText
         android:id="@+id/searchEdtTxt"
         android:layout_width="230dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/backBtn"
         app:layout_constraintTop_toTopOf="@id/backBtn"
         app:layout_constraintStart_toEndOf="@id/backBtn"
@@ -31,7 +31,8 @@
         android:hint="@string/search"
         android:textColorHint="@color/grey_white"
         android:textColor="@color/white"
-        android:textAppearance="@style/heading"/>
+        android:textAppearance="@style/heading"
+        android:background="@null"/>
 
     <ImageButton
         android:id="@+id/searchBtn"
